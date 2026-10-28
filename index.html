@@ -19,6 +19,306 @@
 .section.projects{background:#e9f7ed}.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}.project-card{overflow:hidden;background:#fffdf9;border:2px solid var(--plum);border-radius:16px;box-shadow:5px 5px 0 var(--plum);transition:transform .2s}.project-card:hover{transform:translateY(-4px) rotate(.4deg)}.project-cover{height:155px;display:grid;place-items:center;font-size:3.5rem;position:relative;background:linear-gradient(135deg,#dcd0ff,#ffd7e7)}.project-card:nth-child(3n+2) .project-cover{background:linear-gradient(135deg,#ffedab,#ffbea0)}.project-card:nth-child(3n) .project-cover{background:linear-gradient(135deg,#c5eed0,#b1e4f3)}.project-cover img,.craft-img{width:100%;height:100%;object-fit:cover}.project-body{padding:17px}.project-body h3{font:600 1.35rem 'Fredoka',sans-serif;margin:0 0 5px}.project-body p{color:var(--muted);font-size:.92rem;margin:0 0 10px}.project-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:13px;font-size:.84rem;font-weight:700;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#e887ad}
 .section.creative{background:#f6eefe}.creative-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.creative-panel{padding:23px;border:2px solid var(--plum);border-radius:18px;box-shadow:5px 5px 0 var(--plum);background:#fffdf9;position:relative;overflow:hidden}.creative-panel.music{background:#ffe1eb}.creative-panel.crafts{background:#fff0b8}.creative-panel h3{font:600 1.8rem 'Fredoka',sans-serif;margin:0 0 8px}.creative-panel p{color:#6d5d70}.music-notes{font-size:2.2rem;letter-spacing:10px}.craft-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:17px}.craft-item{background:#fff;padding:8px 8px 14px;border:1px solid #e7d8df;box-shadow:2px 3px 0 #d5c3cf;transform:rotate(-2deg)}.craft-item:nth-child(even){transform:rotate(2deg)}.craft-placeholder{height:115px;display:grid;place-items:center;background:linear-gradient(135deg,#e1d8ff,#ffcfdd);font-size:2rem}.craft-item p{text-align:center;font:700 .95rem 'Kalam',cursive;margin:7px 0 0;color:var(--plum)}
 .section.achievements{background:#fff8f0}.ach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.achievement{background:#fff;border:2px dashed #bba3c1;border-radius:15px;padding:19px;text-align:center}.achievement .emoji{font-size:2.1rem}.achievement h3{font:600 1.15rem 'Fredoka',sans-serif;margin:5px 0}.achievement p{font-size:.9rem;color:var(--muted);margin:0}
+.roadmap-section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 7%;
+  background:
+    radial-gradient(circle at 10% 15%, #ffe4ec 0, transparent 25%),
+    radial-gradient(circle at 90% 80%, #dff8ec 0, transparent 28%),
+    #fffaf4;
+  color: #45364f;
+}
+
+.roadmap-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.roadmap-sticker {
+  display: inline-block;
+  padding: 9px 16px;
+  background: #f9dfb9;
+  border: 2px dashed #d89d69;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transform: rotate(-2deg);
+}
+
+.roadmap-heading h2 {
+  margin: 20px 0 12px;
+  font-size: clamp(30px, 5vw, 48px);
+  font-family: inherit;
+}
+
+.roadmap-heading h2 span {
+  color: #bc78a5;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 7px;
+}
+
+.roadmap-heading p {
+  color: #7e7083;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.roadmap-progress {
+  max-width: 650px;
+  margin: 0 auto 42px;
+  padding: 22px;
+  background: #ffffffc9;
+  border: 2px solid #f1dce9;
+  border-radius: 22px;
+  box-shadow: 4px 5px 0 #ead8e6;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 13px;
+  font-size: 13px;
+}
+
+.progress-info strong {
+  color: #b46b9b;
+}
+
+.progress-track {
+  width: 100%;
+  height: 13px;
+  overflow: hidden;
+  background: #f2e8f0;
+  border-radius: 20px;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #f2a9c7, #b9a5ef, #9edfc4);
+  border-radius: inherit;
+  transition: width 0.5s ease;
+}
+
+.roadmap-list {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 25px;
+}
+
+.roadmap-list::before {
+  content: "";
+  position: absolute;
+  left: 37px;
+  top: 35px;
+  bottom: 35px;
+  border-left: 3px dashed #d9b9d4;
+}
+
+.roadmap-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) 35px;
+  align-items: start;
+  gap: 16px;
+  padding: 25px;
+  background: #fff;
+  border: 2px solid #f0dce9;
+  border-radius: 25px 18px 27px 17px;
+  box-shadow: 5px 6px 0 #eadce9;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: roadmap-appear 0.65s ease both;
+}
+
+.roadmap-card:nth-child(even) {
+  border-color: #d8eadd;
+  box-shadow: 5px 6px 0 #d9eadc;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-5px) rotate(-0.4deg);
+  box-shadow: 7px 10px 0 #e5d3e4;
+}
+
+.roadmap-icon {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  background: #ffe6ee;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 0 2px #efc7dc;
+  font-size: 29px;
+}
+
+.roadmap-card:nth-child(even) .roadmap-icon {
+  background: #e1f5e8;
+  box-shadow: 0 0 0 2px #c0e3cd;
+}
+
+.roadmap-tag {
+  display: inline-block;
+  margin: 3px 0 10px;
+  color: #b16b99;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.roadmap-content h3 {
+  margin: 0 0 10px;
+  color: #4b3b52;
+  font-size: 21px;
+}
+
+.roadmap-content p {
+  margin: 0 0 15px;
+  color: #7b7080;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.roadmap-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 17px;
+}
+
+.roadmap-skills span {
+  padding: 6px 10px;
+  background: #f9edf4;
+  border-radius: 8px;
+  color: #795a75;
+  font-size: 11px;
+}
+
+.roadmap-skills span:nth-child(even) {
+  background: #eaf6ed;
+  color: #54775d;
+}
+
+.roadmap-btn {
+  padding: 10px 14px;
+  background: #fff0f6;
+  border: 1px solid #edc7dc;
+  border-radius: 12px;
+  color: #a15c87;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.roadmap-btn:hover {
+  background: #f5d7e7;
+  transform: scale(1.03);
+}
+
+.roadmap-card.completed {
+  border-color: #b9dfc4;
+}
+
+.roadmap-card.completed .roadmap-btn {
+  background: #dff4e5;
+  border-color: #b8dec3;
+  color: #417751;
+}
+
+.roadmap-number {
+  color: #d3b7ce;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.roadmap-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 650px;
+  margin: 42px auto 0;
+  padding: 20px;
+  background: #fff0c9;
+  border: 2px dashed #e6c78d;
+  border-radius: 18px;
+  text-align: center;
+  transform: rotate(-0.5deg);
+}
+
+.roadmap-note p {
+  margin: 0;
+  color: #786044;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@keyframes roadmap-appear {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .roadmap-section {
+    padding: 55px 5%;
+  }
+
+  .roadmap-card {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 13px;
+    padding: 17px;
+  }
+
+  .roadmap-list::before {
+    left: 24px;
+  }
+
+  .roadmap-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 14px;
+    font-size: 22px;
+  }
+
+  .roadmap-number {
+    display: none;
+  }
+
+  .roadmap-content h3 {
+    font-size: 18px;
+  }
+
+  .roadmap-progress {
+    padding: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .roadmap-card {
+    animation: none;
+    transition: none;
+  }
+
+  .progress-fill {
+    transition: none;
+  }
+}
 .section.contact{background:#ffebf2}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:35px;align-items:start}.letter{padding:27px;background:#fffdf9;border:2px solid var(--plum);box-shadow:6px 6px 0 var(--plum);transform:rotate(-1deg)}.letter h3{font:600 1.8rem 'Fredoka',sans-serif;margin:0 0 10px}.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.socials a{padding:8px 12px;background:#e5dcff;border:1px solid var(--plum);border-radius:999px;font-weight:700;font-size:.85rem}.contact-form{padding:23px;background:#fffdf9;border:2px solid var(--plum);border-radius:16px;box-shadow:5px 5px 0 var(--plum)}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}.field label{font-size:.88rem;font-weight:700}.field input,.field textarea,.field select{width:100%;padding:12px;border:1.5px solid #cbb9cb;border-radius:10px;background:#fff8f5;color:var(--plum);outline-color:#bd90df}.field textarea{min-height:120px;resize:vertical}.form-note{font-size:.8rem;color:var(--muted);margin:10px 0 0}
 footer{padding:28px 0;background:var(--plum);color:#fff3fb}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.footer-inner p{margin:0;font-size:.88rem}.footer-inner .scribble{font-size:1.2rem;color:#ffe58a}
 .admin-fab{position:fixed;bottom:18px;right:18px;z-index:30;border:2px solid var(--plum);background:var(--yellow);border-radius:999px;padding:12px 16px;font-weight:700;box-shadow:4px 4px 0 var(--plum);cursor:pointer}.modal-backdrop{position:fixed;inset:0;background:#24132dcc;z-index:50;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.open{display:flex}.modal{background:var(--cream);width:min(800px,100%);max-height:90vh;overflow:auto;border:2px solid var(--plum);border-radius:20px;box-shadow:8px 8px 0 #120b18;padding:23px}.modal-head{display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:1px dashed #cdb9cc;padding-bottom:12px;margin-bottom:18px}.modal-head h2{font:600 1.8rem 'Fredoka',sans-serif;margin:0}.close-btn{border:2px solid var(--plum);background:#fff;border-radius:9px;padding:5px 10px;cursor:pointer}.admin-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.admin-tabs button{border:1px solid var(--plum);border-radius:999px;background:#fff;padding:7px 11px;cursor:pointer}.admin-tabs button.active{background:var(--lav);font-weight:700}.admin-panel{display:none}.admin-panel.active{display:block}.admin-list{display:grid;gap:9px;margin-top:14px}.admin-row{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;padding:11px;border:1px solid var(--line);border-radius:10px}.admin-row .row-actions{display:flex;gap:6px}.danger{background:#ffd5dd}.notice{padding:12px 14px;background:#fff1b8;border:1px solid #e7cc76;border-radius:10px;font-size:.88rem;margin-bottom:15px}.hidden{display:none!important}.empty{padding:18px;border:1px dashed #bda8bd;border-radius:12px;color:var(--muted);text-align:center;background:#fff9}
@@ -33,7 +333,8 @@ footer{padding:28px 0;background:var(--plum);color:#fff3fb}.footer-inner{display
  <div class="wrap nav-inner">
   <a class="brand" href="#home"><span class="brand-mark">✿</span> ARUNIMA.KV</a>
   <div class="navlinks" id="navlinks">
-   <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#creative">Creative Corner</a><a href="#achievements">Wins</a><a href="#contact">Contact</a>
+   <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#creative">Creative Corner</a><a href="#achievements">Wins</a><a href="#roadmap">Career Roadmap ✨</a>
+<a href="#contact">Contact</a>
   </div>
   <div class="nav-actions"><button class="btn small" onclick="openAdmin()">✎ Edit my site</button><button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button></div>
  </div>
@@ -95,6 +396,113 @@ footer{padding:28px 0;background:var(--plum);color:#fff3fb}.footer-inner{display
  <article class="creative-panel crafts"><span class="sticker" style="background:#fffdf9">SIDE B · CRAFTS</span><h3>Crafting Studio ✂️</h3><p>Handmade things, little experiments, and colourful creations.</p><div class="craft-grid" id="craftGrid"></div><button class="btn small" style="margin-top:16px" onclick="openAdmin('crafts')">＋ Add a creation</button></article></div>
  </div></section>
 <section class="section achievements" id="achievements"><div class="wrap"><div class="section-head"><span class="eyebrow">PAGE 06 · LITTLE WINS</span><h2>LITTLE WINS DESERVE A PAGE 🏆</h2><p>Collecting experiences, one step at a time.</p></div><div class="ach-grid" id="achievementsGrid"></div></div></section>
+<section class="roadmap-section" id="roadmap">
+  <div class="roadmap-heading">
+    <span class="roadmap-sticker">🗺️ MY JOURNEY</span>
+    <h2>My Creative <span>Roadmap</span> ✨</h2>
+    <p>A little progress every day leads to big dreams!</p>
+  </div>
+
+  <div class="roadmap-progress">
+    <div class="progress-info">
+      <span>My growth journey 🌱</span>
+      <strong id="roadmap-percentage">0% completed</strong>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="roadmap-progress-fill"></div>
+    </div>
+  </div>
+
+  <div class="roadmap-list">
+
+    <article class="roadmap-card completed" data-step="1">
+      <div class="roadmap-icon">🎓</div>
+      <div class="roadmap-content">
+        <span class="roadmap-tag">CHAPTER 01 · CURRENT</span>
+        <h3>My College Journey</h3>
+        <p>Learning the fundamentals of Computer Science and Engineering at JCET.</p>
+        <div class="roadmap-skills">
+          <span>CSE</span><span>Learning</span><span>Growth</span>
+        </div>
+        <button class="roadmap-btn" onclick="toggleRoadmapStep(this)">
+          ✓ Completed
+        </button>
+      </div>
+      <span class="roadmap-number">01</span>
+    </article>
+
+    <article class="roadmap-card" data-step="2">
+      <div class="roadmap-icon">💻</div>
+      <div class="roadmap-content">
+        <span class="roadmap-tag">CHAPTER 02</span>
+        <h3>Become a Coding Girl</h3>
+        <p>Strengthen my programming basics, practise problem-solving, and learn DSA.</p>
+        <div class="roadmap-skills">
+          <span>C Programming</span><span>Python</span><span>DSA</span>
+        </div>
+        <button class="roadmap-btn" onclick="toggleRoadmapStep(this)">
+          ☆ Mark as completed
+        </button>
+      </div>
+      <span class="roadmap-number">02</span>
+    </article>
+
+    <article class="roadmap-card" data-step="3">
+      <div class="roadmap-icon">🎨</div>
+      <div class="roadmap-content">
+        <span class="roadmap-tag">CHAPTER 03</span>
+        <h3>Build Amazing Projects</h3>
+        <p>Create creative websites and useful applications that solve real problems.</p>
+        <div class="roadmap-skills">
+          <span>Web Development</span><span>Git & GitHub</span>
+        </div>
+        <button class="roadmap-btn" onclick="toggleRoadmapStep(this)">
+          ☆ Mark as completed
+        </button>
+      </div>
+      <span class="roadmap-number">03</span>
+    </article>
+
+    <article class="roadmap-card" data-step="4">
+      <div class="roadmap-icon">🚀</div>
+      <div class="roadmap-content">
+        <span class="roadmap-tag">CHAPTER 04</span>
+        <h3>Land My First Internship</h3>
+        <p>Build my resume, improve my communication, and gain real-world experience.</p>
+        <div class="roadmap-skills">
+          <span>Resume</span><span>Internships</span><span>Confidence</span>
+        </div>
+        <button class="roadmap-btn" onclick="toggleRoadmapStep(this)">
+          ☆ Mark as completed
+        </button>
+      </div>
+      <span class="roadmap-number">04</span>
+    </article>
+
+    <article class="roadmap-card" data-step="5">
+      <div class="roadmap-icon">🌟</div>
+      <div class="roadmap-content">
+        <span class="roadmap-tag">CHAPTER 05 · BIG DREAM</span>
+        <h3>My Dream Tech Career</h3>
+        <p>Graduate with strong skills, join a good company, and keep growing as a developer.</p>
+        <div class="roadmap-skills">
+          <span>Career</span><span>Innovation</span><span>Success</span>
+        </div>
+        <button class="roadmap-btn" onclick="toggleRoadmapStep(this)">
+          ☆ Mark as completed
+        </button>
+      </div>
+      <span class="roadmap-number">05</span>
+    </article>
+
+  </div>
+
+  <div class="roadmap-note">
+    <span>💌</span>
+    <p>Dear future me, keep going. You're building something beautiful!</p>
+    <span>🌷</span>
+  </div>
+</section>
 <section class="section contact" id="contact"><div class="wrap"><div class="section-head"><span class="eyebrow">LAST PAGE · SAY HELLO</span><h2>LET'S CONNECT, SHALL WE? 💌</h2><p>Have an idea, an opportunity, or just want to say hi?</p></div><div class="contact-grid"><div class="letter"><h3>Dear future friend,</h3><p>Thanks for flipping through my little scrapbook. I'm learning, creating, and growing — and it's lovely to have you here.</p><p class="scribble">Stay curious, stay creative! ♡</p><div class="socials" id="socialLinks"><span class="tag">Add your links in Edit my site</span></div></div><form class="contact-form" onsubmit="submitContact(event)"><div class="field"><label for="contactName">Your name</label><input id="contactName" required placeholder="What should I call you?"></div><div class="field"><label for="contactEmail">Your email</label><input id="contactEmail" type="email" required placeholder="you@example.com"></div><div class="field"><label for="contactSubject">Subject</label><input id="contactSubject" required placeholder="A little hello..."></div><div class="field"><label for="contactMessage">Your message</label><textarea id="contactMessage" required placeholder="Write me a little note..."></textarea></div><button class="btn" type="submit">PREVIEW MY NOTE ✉</button><p class="form-note" id="contactStatus">Demo form only: this standalone file does not send emails. Connect a form service before publishing.</p></form></div></div></section>
 </main>
 <footer><div class="wrap footer-inner"><p>© <span id="year"></span> Arunima KV · Made with curiosity & ♡</p><p class="scribble">one page at a time ✿</p><a href="#home">Back to the top ↑</a></div></footer>
@@ -158,6 +566,55 @@ function saveLinks(e){e.preventDefault();data.links={email:document.getElementBy
 function removeItem(type,i){if(!confirm('Delete this item from your scrapbook?'))return;data[type].splice(i,1);persist();render()}
 function addSong(){const el=document.getElementById('songInput');if(!el.value.trim())return;data.songs.push(el.value.trim());el.value='';persist();render()}
 function deleteSong(i){data.songs.splice(i,1);persist();render()}
+function updateRoadmapProgress() {
+  const cards = document.querySelectorAll(".roadmap-card");
+  const completedCards = document.querySelectorAll(
+    ".roadmap-card.completed"
+  );
+
+  const total = cards.length;
+  const completed = completedCards.length;
+  const percentage = total === 0
+    ? 0
+    : Math.round((completed / total) * 100);
+
+  const percentageText = document.getElementById(
+    "roadmap-percentage"
+  );
+
+  const progressFill = document.getElementById(
+    "roadmap-progress-fill"
+  );
+
+  if (percentageText) {
+    percentageText.textContent = percentage + "% completed";
+  }
+
+  if (progressFill) {
+    progressFill.style.width = percentage + "%";
+  }
+}
+
+function toggleRoadmapStep(button) {
+  const card = button.closest(".roadmap-card");
+
+  if (!card) return;
+
+  card.classList.toggle("completed");
+
+  const isCompleted = card.classList.contains("completed");
+
+  button.textContent = isCompleted
+    ? "✓ Completed"
+    : "☆ Mark as completed";
+
+  updateRoadmapProgress();
+}
+
+/* Calculate progress when the page opens */
+document.addEventListener("DOMContentLoaded", function () {
+  updateRoadmapProgress();
+});
 function submitContact(e){e.preventDefault();const name=document.getElementById('contactName').value.trim();document.getElementById('contactStatus').textContent=`Thanks, ${name}! This is a preview only—the form has not sent an email. Connect a real form service before publishing.`;alert('Preview only: no email has been sent.')}
 render();
 </script>
